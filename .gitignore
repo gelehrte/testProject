@@ -1,2 +1,4 @@
 .vscode/
 __pycache__/
+cms/__pycache__/
+testApp/__pycache__/
