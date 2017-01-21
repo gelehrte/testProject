@@ -2,3 +2,5 @@
 __pycache__/
 cms/__pycache__/
 testApp/__pycache__/
+db.sqlite3
+
