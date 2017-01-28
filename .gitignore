@@ -2,5 +2,11 @@
 __pycache__/
 cms/__pycache__/
 testApp/__pycache__/
+gele/__pycache__/
+hsgw/__pycache__/
+tme/__pycache__/
+ijm/__pycache__/
+tkhs/__pycache__/
 db.sqlite3
+.DS_Store
 
