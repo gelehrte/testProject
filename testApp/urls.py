@@ -19,4 +19,9 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cms/', include('cms.urls', namespace='cms')),   # ←ここを追加
+    url(r'^gele/', include('gele.urls', namespace='gele')),   # ←ここを追加
+    url(r'^tkhs/', include('tkhs.urls', namespace='tkhs')),   # ←ここを追加
+    url(r'^hsgw/', include('hsgw.urls', namespace='hsgw')),   # ←ここを追加
+    url(r'^ijm/', include('ijm.urls', namespace='ijm')),   # ←ここを追加
+    url(r'^tme/', include('tme.urls', namespace='tme')),   # ←ここを追加
 ]

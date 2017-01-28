@@ -38,6 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'cms',
+    'gele',
+    'hsgw',
+    'ijm',
+    'tkhs',
+    'tme',
     'bootstrapform',  # django-bootstrap-form
 ]
 
