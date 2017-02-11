@@ -1,6 +1,7 @@
 from django.db import models
 
 
+# Create your models here.
 class Book(models.Model):
     """書籍"""
     name = models.CharField('書籍名', max_length=255)
