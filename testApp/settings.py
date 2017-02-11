@@ -82,8 +82,12 @@ WSGI_APPLICATION = 'testApp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_db',  # 適当です
+        'USER': 'mycon',  # 適当です
+        'PASSWORD': 'mycon123',  # 適当です
+        'HOST': '',  # 適当です (ローカルホストなら空でも可)
+        'PORT': '',  # 適当です (デフォルトポートなら空でも可)
     }
 }
 
