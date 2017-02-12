@@ -7,18 +7,19 @@ from gele.samodels import Zoo
 
 
 def test_one(request):
-    """書籍の一覧"""
     url = 'mysql+pymysql://mycon:mycon123@localhost/test_db?charset=utf8'
     engine = sa.create_engine(url, echo=True)
     Session = sqlalchemy.orm.sessionmaker(bind=engine)
     session = Session()
-
+    # オブジェクトを利用しても良い
     Zoos = session.query(Zoo)
     for Row in Zoos:
         print(Row.critter)
+    # こっちの書き方でもよい
+    rows = engine.execute('SELECT * FROM zoo')
     return render(request,
                   'test_one/test_one.html',  # 使用するテンプレート
-                  {'Zoos': Zoos})  # テンプレートに渡すデータ
+                  {'Zoos': rows})  # テンプレートに渡すデータ
 
 
 def make_dbtable(request):
