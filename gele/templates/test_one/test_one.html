@@ -12,4 +12,22 @@ table {
 
 {% block content %}
     <h3 class="page-header">テストページ１回目</h3>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>critter</th>
+          <th>count</th>
+          <th>damages</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for zoo in Zoos %}
+        <tr>
+          <td>{{ zoo.critter }}</td>
+          <td>{{ zoo.count }}</td>
+          <td>{{ zoo.damages }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
 {% endblock content %}
