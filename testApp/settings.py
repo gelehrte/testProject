@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'test_db',  # 適当です
         'USER': 'mycon',  # 適当です
-        'PASSWORD': 'mycon123',  # 適当です
+        'PASSWORD': 'mycon123MYCON$',  # 適当です
         'HOST': '',  # 適当です (ローカルホストなら空でも可)
         'PORT': '',  # 適当です (デフォルトポートなら空でも可)
     }
