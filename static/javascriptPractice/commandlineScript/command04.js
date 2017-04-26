@@ -85,3 +85,34 @@ console.log(o4.greetBackwards()); // eiluJ si eman ym ,olleH
 const arr3 = [2, 3, -5, 15, 7]; 
 console.log(Math.min(...arr3)); // -5 
 console.log(Math.max.apply(null, arr3)); // 15
+
+const message = (function() {
+const secret = "私は秘密です! ";
+return `秘密の長さは${secret.length}文字です。`;
+})();
+console.log(message); // 秘密の長さは7文字です。
+
+const f = (function() { let count = 0;
+return function() {
+return `この関数が呼ばれた回数:${++count}回。`; }
+})();
+console.log(f()); // この関数が呼ばれた回数:1回。 
+console.log(f()); // この関数が呼ばれた回数:2回。 
+console.log(f()); // この関数が呼ばれた回数:3回。
+
+let arr0 = [1, 5, 7];
+let arr20 = arr0.splice(1, 0, 2, 3, 4); // arr[1]から2, 3, 4が追加される 
+console.log(arr0); // [ 1, 2, 3, 4, 5, 7 ]
+console.log(arr20); // [] ←何も削除されていない
+arr20 = arr0.splice(5, 0, 6); // arr[5]に6が追加されて、以降ひとつずつ後ろへ 
+console.log(arr0); // [ 1, 2, 3, 4, 5, 6, 7 ]
+console.log(arr20); // [] ←何も削除されていない
+arr20 = arr0.splice(1, 2) // arr[1]から2個削除
+console.log(arr0); // [ 1, 4, 5, 6, 7 ]
+console.log(arr20); // [ 2, 3 ] ←削除された要素
+arr20 = arr0.splice(2, 1, 'a', 'b'); // arr[2]から1個削除して'a'と'b'をそこに追加 
+console.log(arr0); // [ 1, 4, 'a', 'b', 6, 7 ]
+console.log(arr20); // [ 5 ] ←削除された要素
+arr20 = arr0.splice(1, 0, ...[9,8,7]); // arr[5]に6が追加されて、以降ひとつずつ後ろへ 
+console.log(arr0); // [ 1, 2, 3, 4, 5, 6, 7 ]
+console.log(arr20); // [] ←何も削除されていない
